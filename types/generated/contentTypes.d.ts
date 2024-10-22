@@ -593,7 +593,7 @@ export interface ApiColorColor extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    Name: Schema.Attribute.String;
+    name: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -603,6 +603,30 @@ export interface ApiColorColor extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::color.color'>;
+  };
+}
+
+export interface ApiFabricFabric extends Struct.CollectionTypeSchema {
+  collectionName: 'fabrics';
+  info: {
+    singularName: 'fabric';
+    pluralName: 'fabrics';
+    displayName: 'Fabric';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    material: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::fabric.fabric'>;
   };
 }
 
@@ -657,6 +681,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
       'manyToMany',
       'api::category.category'
     >;
+    is_discount: Schema.Attribute.Boolean;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -1051,6 +1076,7 @@ declare module '@strapi/strapi' {
       'api::article.article': ApiArticleArticle;
       'api::category.category': ApiCategoryCategory;
       'api::color.color': ApiColorColor;
+      'api::fabric.fabric': ApiFabricFabric;
       'api::global.global': ApiGlobalGlobal;
       'api::product.product': ApiProductProduct;
       'admin::permission': AdminPermission;

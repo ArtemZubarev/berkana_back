@@ -1,18 +1,17 @@
 {
   "kind": "collectionType",
-  "collectionName": "colors",
+  "collectionName": "fabrics",
   "info": {
-    "singularName": "color",
-    "pluralName": "colors",
-    "displayName": "Color",
-    "description": ""
+    "singularName": "fabric",
+    "pluralName": "fabrics",
+    "displayName": "Fabric"
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "name": {
+    "material": {
       "type": "string"
     }
   }
