@@ -594,6 +594,7 @@ export interface ApiColorColor extends Struct.CollectionTypeSchema {
   };
   attributes: {
     name: Schema.Attribute.String;
+    slug: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -673,12 +674,10 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     name: Schema.Attribute.String;
     description: Schema.Attribute.Text;
     color: Schema.Attribute.Relation<'oneToOne', 'api::color.color'>;
-    imageUrl: Schema.Attribute.String;
-    sku: Schema.Attribute.String;
     price: Schema.Attribute.Component<'shared.size-price-select', true>;
     preview: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    is_discount: Schema.Attribute.Boolean;
     category: Schema.Attribute.Relation<'oneToOne', 'api::category.category'>;
+    is_new: Schema.Attribute.Boolean;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

@@ -23,12 +23,6 @@
       "relation": "oneToOne",
       "target": "api::color.color"
     },
-    "imageUrl": {
-      "type": "string"
-    },
-    "sku": {
-      "type": "string"
-    },
     "price": {
       "type": "component",
       "repeatable": true,
@@ -45,13 +39,13 @@
         "audios"
       ]
     },
-    "is_discount": {
-      "type": "boolean"
-    },
     "category": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::category.category"
+    },
+    "is_new": {
+      "type": "boolean"
     }
   }
 }
