@@ -9,7 +9,11 @@
     "dev": "strapi develop",
     "seed:example": "node ./scripts/seed.js",
     "start": "strapi start",
-    "strapi": "strapi"
+    "strapi": "strapi",
+    "migrate": "strapi migrate",
+    "migrate:rollback": "strapi migrate:rollback",
+    "migrate:list": "strapi migrate:list",
+    "migrate:status": "strapi migrate:status"
   },
   "dependencies": {
     "@strapi/plugin-cloud": "5.0.1",
