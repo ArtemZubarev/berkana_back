@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_shared_order_products",
+  "info": {
+    "displayName": "Order Product",
+    "icon": "gift",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "size": {
+      "type": "string"
+    },
+    "price": {
+      "type": "integer"
+    },
+    "productId": {
+      "type": "string"
+    }
+  }
+}

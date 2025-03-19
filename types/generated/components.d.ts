@@ -30,6 +30,21 @@ export interface SharedSeo extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedOrderProduct extends Struct.ComponentSchema {
+  collectionName: 'components_shared_order_products';
+  info: {
+    displayName: 'Order Product';
+    icon: 'gift';
+    description: '';
+  };
+  attributes: {
+    name: Schema.Attribute.String;
+    size: Schema.Attribute.String;
+    price: Schema.Attribute.Integer;
+    productId: Schema.Attribute.String;
+  };
+}
+
 export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
@@ -41,12 +56,33 @@ export interface SharedMedia extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedDelivery extends Struct.ComponentSchema {
+  collectionName: 'components_shared_deliveries';
+  info: {
+    displayName: 'Delivery';
+    icon: 'gift';
+    description: '';
+  };
+  attributes: {
+    city: Schema.Attribute.String & Schema.Attribute.Required;
+    street: Schema.Attribute.String & Schema.Attribute.Required;
+    house: Schema.Attribute.String & Schema.Attribute.Required;
+    apartment: Schema.Attribute.String;
+    entrance: Schema.Attribute.String;
+    floor: Schema.Attribute.String;
+    domofon: Schema.Attribute.String;
+    comment: Schema.Attribute.Text;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'shared.size-price-select': SharedSizePriceSelect;
       'shared.seo': SharedSeo;
+      'shared.order-product': SharedOrderProduct;
       'shared.media': SharedMedia;
+      'shared.delivery': SharedDelivery;
     }
   }
 }

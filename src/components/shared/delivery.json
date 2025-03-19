@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_shared_deliveries",
+  "info": {
+    "displayName": "Delivery",
+    "icon": "gift",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "city": {
+      "type": "string",
+      "required": true
+    },
+    "street": {
+      "type": "string",
+      "required": true
+    },
+    "house": {
+      "type": "string",
+      "required": true
+    },
+    "apartment": {
+      "type": "string"
+    },
+    "entrance": {
+      "type": "string"
+    },
+    "floor": {
+      "type": "string"
+    },
+    "domofon": {
+      "type": "string"
+    },
+    "comment": {
+      "type": "text"
+    }
+  }
+}
