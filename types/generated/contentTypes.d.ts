@@ -650,6 +650,10 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     preview: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     category: Schema.Attribute.Relation<'oneToOne', 'api::category.category'>;
     is_new: Schema.Attribute.Boolean;
+    media: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
