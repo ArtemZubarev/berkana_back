@@ -614,7 +614,11 @@ export interface ApiOrderOrder extends Struct.CollectionTypeSchema {
     total: Schema.Attribute.Integer;
     products: Schema.Attribute.Component<'shared.order-product', true>;
     mail: Schema.Attribute.Email & Schema.Attribute.Required;
-    orderStatus: Schema.Attribute.Enumeration<['CREATED', 'PAID']>;
+    orderStatus: Schema.Attribute.Enumeration<
+      ['CREATED', 'PAID', 'PAYMENT_FAILED']
+    > &
+      Schema.Attribute.Required;
+    operationId: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

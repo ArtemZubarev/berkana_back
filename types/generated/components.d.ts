@@ -4,7 +4,7 @@ export interface SharedSizePriceSelect extends Struct.ComponentSchema {
   collectionName: 'components_shared_size_price_selects';
   info: {
     displayName: 'Size/Price select';
-    icon: 'alien';
+    icon: 'database';
     description: '';
   };
   attributes: {
@@ -42,6 +42,7 @@ export interface SharedOrderProduct extends Struct.ComponentSchema {
     size: Schema.Attribute.String;
     price: Schema.Attribute.Integer;
     productId: Schema.Attribute.String;
+    quantity: Schema.Attribute.Integer;
   };
 }
 
