@@ -18,6 +18,9 @@
     },
     "productId": {
       "type": "string"
+    },
+    "quantity": {
+      "type": "integer"
     }
   }
 }

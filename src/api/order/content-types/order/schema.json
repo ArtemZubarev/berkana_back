@@ -47,8 +47,13 @@
       "type": "enumeration",
       "enum": [
         "CREATED",
-        "PAID"
-      ]
+        "PAID",
+        "PAYMENT_FAILED"
+      ],
+      "required": true
+    },
+    "operationId": {
+      "type": "string"
     }
   }
 }
